@@ -58,7 +58,8 @@ process fakeDeDup {
 
 prededup_dp
 	.mix(dp_dedup)
-	.filter( =~/rmdup/)
+    .view()
+	.filter( =~/*rmdup*/)
 	.set{ch_fakedp}
 
 // Downstream process (here is damage profiler)
